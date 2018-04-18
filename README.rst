@@ -35,10 +35,45 @@ executing the following command:
     compiling catalog ./locale/en/LC_MESSAGES/messages.po to ./locale/en/LC_MESSAGES/messages.mo
     compiling catalog ./locale/es/LC_MESSAGES/messages.po to ./locale/es/LC_MESSAGES/messages.mo
 
-Running script
---------------
+Running Python script
+---------------------
 
 For running the Python script, execute the following command:
+
+.. code:: bash
+
+    $ python ./demo.py 
+    Home
+    Canon
+    About
+    Setting
+    Translation
+
+    -----
+
+    Inicio
+    Canon
+    Acerca de
+    Configuración
+    Traducción
+
+    -----
+
+    Home
+    Canon
+    Sobre
+    Configuração
+    Tradução
+
+.. note::
+
+    You can notice that the script prints by console each messages in each supported
+    translated language, in this case English, Spanish and Brazilian Portuguese.
+
+Running Web Application script
+------------------------------
+
+For running the Python Web Application script, execute the following command:
 
 .. code:: bash
 
@@ -90,8 +125,10 @@ For running the Python script, execute the following command:
     </html>
 
 
-You can notice that the script prints by console each template in each supported translated language, 
-in this case English, Spanish and Brazilian Portuguese.
+.. note::
+
+    You can notice that the script prints by console each HTML templates in each
+    supported translated language, in this case English, Spanish and Brazilian Portuguese.
 
 Working with Babel
 ------------------

@@ -1,7 +1,7 @@
 i18n Python Web Application by Babel and Jinja2
 ===============================================
 
-How to enable i18n support for Python Web Application using Babel and Jinja2
+How to enable i18n support for Python Web Application using Babel and Jinja2.
 
 
 Download
@@ -25,8 +25,79 @@ For install the source code, please execute the following commands:
     $ source ./bin/activate
     $ pip install -r requirements.txt --timeout 120
 
-At the moment just compile message catalogs to MO files for finish the installation, 
+At the moment just compile message catalogs to MO files for finish the installation,
 executing the following command:
+
+Configuration
+=============
+
+For enable the *Internationalization and Localization* for this Sphinx Theme, you will need checkout 
+the following configurations:
+
+Translations files
+------------------
+
+The translations files are based on ``gettext`` format and they are placed at the 
+``python_i18n_babel_jinja2/locale/`` directory, like it showing the following structure:
+
+.. code:: bash
+
+    python_i18n_babel_jinja2/locale/
+    ├── en
+    │   └── LC_MESSAGES
+    │       ├── messages.mo
+    │       └── messages.po
+    ├── es
+    │   └── LC_MESSAGES
+    │       ├── messages.mo
+    │       └── messages.po
+    ├── pt_BR
+    │   └── LC_MESSAGES
+    │       ├── messages.mo
+    │       └── messages.po
+    ├── babel.cfg
+    └── messages.pot
+
+``python_i18n_babel_jinja2/locale/<LANG>/LC_MESSAGES/``
+    This folder contains a specific language is the **Gettext format**.
+
+``babel.cfg``
+    This file is the **babel** configurations.
+
+``messages.pot``
+    This file is the **Portable Object Template** Gettext format.
+
+``messages.po``
+    This file is the **Portable Object** Gettext format to translate.
+
+``messages.mo``
+    This file is the **Machine Object** Gettext format generated later of translate 
+    your ``messages.po`` file via the catalog compilation.
+
+Babel extraction configurations
+-------------------------------
+
+First of all you have to get into the folder where you have your project and create a mapping file 
+called ``babel.cfg`` into ``python_i18n_babel_jinja2/locale/`` directory that contains the 
+**extraction from Jinja2 HTML templates** configurations. For typical Sphinx extensions, this is what 
+you want in there:
+
+.. code:: cfg
+
+    # Extraction from Jinja2 HTML templates
+    [jinja2: **/**.html]
+    encoding = utf-8
+    ignore_tags = script,style
+    include_attrs = alt title summary placeholder
+
+
+.. seealso::
+
+    More details check out the following links:
+
+    - `How setup this file <http://babel.pocoo.org/en/latest/setup.html>`_
+    - `A previous file example description <http://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration>`_
+
 
 .. code:: bash
 
@@ -35,10 +106,41 @@ executing the following command:
     compiling catalog ./locale/en/LC_MESSAGES/messages.po to ./locale/en/LC_MESSAGES/messages.mo
     compiling catalog ./locale/es/LC_MESSAGES/messages.po to ./locale/es/LC_MESSAGES/messages.mo
 
+Web Application
+===============
+
+The struture directory for the Web Application is like the following:
+
+``view/index.html``
+    This is a HTML template based jinja2 engine.
+
+``demo.py``
+    This Python module is a Gettext demostration application.
+
+``i18n.py``
+    This Python module is an app for find out and print all supported languages available 
+    in ``locale`` directory.
+
+``jj2.py``
+    This Python module is the main application.
+
+Locales Python script
+---------------------
+
+For running the a Python script called ``i18n.py``, for show the languages available 
+executing the following command:
+
+.. code:: bash
+
+    $ python ./i18n.py
+    pt_BR
+    en
+    es
+
 Running Python script
 ---------------------
 
-For running the Python script, execute the following command:
+For running the Python script called ``demo.py``, execute the following command:
 
 .. code:: bash
 
@@ -68,12 +170,12 @@ For running the Python script, execute the following command:
 .. note::
 
     You can notice that the script prints by console each messages in each supported
-    translated language, in this case English, Spanish and Brazilian Portuguese.
+    translated language, in this case *English*, *Spanish* and *Brazilian Portuguese*.
 
 Running Web Application script
 ------------------------------
 
-For running the Python Web Application script, execute the following command:
+For running the Python Web Application script called ``jj2.py``, execute the following command:
 
 .. code:: bash
 
@@ -128,12 +230,13 @@ For running the Python Web Application script, execute the following command:
 .. note::
 
     You can notice that the script prints by console each HTML templates in each
-    supported translated language, in this case English, Spanish and Brazilian Portuguese.
+    supported translated language, in this case *English*, *Spanish* and *Brazilian Portuguese*.
 
 Working with Babel
 ------------------
 
-If the command has been correctly installed `babel` package, a command should allow you to use the following command:
+If the command has been correctly installed ``babel`` package, a command should allow you to use 
+the following command:
 
 .. code:: bash
 

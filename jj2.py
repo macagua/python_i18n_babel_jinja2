@@ -18,6 +18,7 @@ env = jinja2.Environment(
 env.install_gettext_translations(i18n)
 
 if __name__ == '__main__':
+    ''' the main application '''
     
     # Set HTML template
     template = env.get_template('index.html')

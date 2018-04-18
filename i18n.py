@@ -54,6 +54,8 @@ def setLocale(locale):
 
 
 if __name__ == '__main__':
+    ''' find out and print all supported locales in locale directory '''
+
     # for test purpose
     for dirpath, dirnames, filenames in os.walk(localedir):
         for dirname in dirnames:

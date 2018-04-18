@@ -4,6 +4,7 @@
 import i18n
 
 if __name__ == '__main__':
+    ''' A Gettext demostration application '''
     
     # Set locale to English
     i18n.setLocale("en")

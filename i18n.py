@@ -15,9 +15,14 @@ import os
 import gettext
 import threading
 
+# Gettext locale directory
 localedir = os.path.join(os.path.dirname(__file__), 'locale')
+
+# Gettext domain
 domain = 'messages'
 threadLocalData = threading.local()
+
+# set default locale for the webapp
 threadLocalData.locale = 'en'
 
 # find out all supported locales in locale directory

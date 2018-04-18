@@ -28,6 +28,13 @@ For install the source code, please execute the following commands:
 At the moment just compile message catalogs to MO files for finish the installation,
 executing the following command:
 
+.. code:: bash
+
+    $ pybabel compile -f -d ./locale
+    compiling catalog ./locale/pt_BR/LC_MESSAGES/messages.po to ./locale/pt_BR/LC_MESSAGES/messages.mo
+    compiling catalog ./locale/en/LC_MESSAGES/messages.po to ./locale/en/LC_MESSAGES/messages.mo
+    compiling catalog ./locale/es/LC_MESSAGES/messages.po to ./locale/es/LC_MESSAGES/messages.mo
+
 Configuration
 =============
 
@@ -97,14 +104,6 @@ you want in there:
 
     - `How setup this file <http://babel.pocoo.org/en/latest/setup.html>`_
     - `A previous file example description <http://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration>`_
-
-
-.. code:: bash
-
-    $ pybabel compile -f -d ./locale
-    compiling catalog ./locale/pt_BR/LC_MESSAGES/messages.po to ./locale/pt_BR/LC_MESSAGES/messages.mo
-    compiling catalog ./locale/en/LC_MESSAGES/messages.po to ./locale/en/LC_MESSAGES/messages.mo
-    compiling catalog ./locale/es/LC_MESSAGES/messages.po to ./locale/es/LC_MESSAGES/messages.mo
 
 Web Application
 ===============

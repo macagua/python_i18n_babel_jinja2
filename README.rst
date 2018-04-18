@@ -1,8 +1,13 @@
 i18n Python Web Application by Babel and Jinja2
 ===============================================
 
+How to enable i18n support for Python Web Application using Babel and Jinja2
+
+
 Download
 --------
+
+For download the source code, please execute the follow command:
 
 .. code:: bash
 
@@ -12,37 +17,13 @@ Download
 Installation
 ------------
 
+For install the source code, please execute the following commands:
+
 .. code:: bash
 
     $ virtualenv .
     $ source ./bin/activate
     $ pip install -r requirements.txt --timeout 120
-
-If the command has been correctly installed, a command should allow you to use the following command:
-
-.. code:: bash
-
-    $ pybabel subcommand options
-
-Execute the follow command for more options and follow these instructions to get details:
-
-.. code:: bash
-
-    $  pybabel --help
-    Usage: pybabel command [options] [args]
-
-    Options:
-      --version       show program's version number and exit
-      -h, --help      show this help message and exit
-      --list-locales  print all known locales and exit
-      -v, --verbose   print as much as possible
-      -q, --quiet     print as little as possible
-
-    commands:
-      compile  compile message catalogs to MO files
-      extract  extract messages from source files and generate a POT file
-      init     create new message catalogs from a POT file
-      update   update existing message catalogs from a POT file
 
 At the moment just compile message catalogs to MO files for finish the installation, 
 executing the following command:
@@ -115,6 +96,32 @@ in this case English, Spanish and Brazilian Portuguese.
 Working with Babel
 ------------------
 
+If the command has been correctly installed `babel` package, a command should allow you to use the following command:
+
+.. code:: bash
+
+    $ pybabel subcommand options
+
+Execute the follow command for more options and follow these instructions to get details:
+
+.. code:: bash
+
+    $  pybabel --help
+    Usage: pybabel command [options] [args]
+
+    Options:
+      --version       show program's version number and exit
+      -h, --help      show this help message and exit
+      --list-locales  print all known locales and exit
+      -v, --verbose   print as much as possible
+      -q, --quiet     print as little as possible
+
+    commands:
+      compile  compile message catalogs to MO files
+      extract  extract messages from source files and generate a POT file
+      init     create new message catalogs from a POT file
+      update   update existing message catalogs from a POT file
+
 If you need extract new string to translate from the source code, execute the following command:
 
 .. code:: bash
@@ -123,13 +130,19 @@ If you need extract new string to translate from the source code, execute the fo
 
 If you need initialize new language to translate from the POT file, execute the following command:
 
+.. code:: bash
+
     $ pybabel init -l <LANG> -i ./locale/messages.pot -o ./locale/<LANG>/LC_MESSAGES/messages.po
 
 If you update the new language or a language existing to translate from the POT file to PO file, execute the following command:
 
+.. code:: bash
+
     $ pybabel update -l <LANG> -d ./locale -i ./locale/messages.pot
 
 If you need compile compile message catalogs to binary MO files, execute the following command:
+
+.. code:: bash
 
     $ pybabel compile -f -d ./locale
 

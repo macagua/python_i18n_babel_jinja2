@@ -91,7 +91,7 @@ you want in there:
     include_attrs = alt title summary placeholder
 
 
-.. seealso::
+.. note::
 
     More details check out the following links:
 

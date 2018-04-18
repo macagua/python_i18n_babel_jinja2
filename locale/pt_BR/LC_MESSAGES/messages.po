@@ -1,0 +1,45 @@
+# Portuguese (Brazil) translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-04-17 23:03-0400\n"
+"PO-Revision-Date: 2018-04-17 22:39-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: view/demo.html:4
+msgid "i18n Python Web Application by Babel and Jinja2"
+msgstr "Internacionalização e Localização do aplicativo da Web em Python por Babel e Jinja2"
+
+
+#: view/demo.html:7
+msgid "Home"
+msgstr "Home"
+
+#: view/demo.html:8
+msgid "News"
+msgstr "Notícia"
+
+#: view/demo.html:9
+msgid "About"
+msgstr "Sobre"
+
+#: view/demo.html:10
+msgid "Setting"
+msgstr "Configuração"
+
+#: view/demo.html:11
+msgid "Translation"
+msgstr "Tradução"
+

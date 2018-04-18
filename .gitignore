@@ -1,0 +1,10 @@
+bin/
+*.mo
+*.pyc
+include/
+lib/
+local/
+pip-selfcheck.json
+*.sublime-project
+*.sublime-workspace
+
